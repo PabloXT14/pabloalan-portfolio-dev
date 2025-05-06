@@ -1,3 +1,4 @@
+/* ========== VARIABLES ========== */
 :root {
 	/* 📝 Fonts */
 	--font-heebo: "Heebo", sans-serif;
@@ -32,6 +33,8 @@
 	--space-10: 2.5rem; /* 40px */
 	--space-12: 3rem; /* 48px */
 	--space-16: 4rem; /* 64px */
+	--space-20: 5rem; /* 80px */
+	--space-24: 6rem; /* 96px */
 
 	/* 🔤 Font Sizes */
 	--font-xs: 0.75rem; /* 12px */
@@ -58,7 +61,23 @@
 	/* 💨 Transitions */
 	--transition-fast: 150ms ease-in-out;
 	--transition-default: 300ms ease-in-out;
+
+	/* 📏 Breakpoints */
+	--breakpoint-xs: 640px;
+	--breakpoint-sm: 768px;
+	--breakpoint-md: 1024px;
+	--breakpoint-lg: 1280px;
+	--breakpoint-xl: 1536px;
+
+	/* 📏 Container */
+	--container-xs: 640px;
+	--container-sm: 768px;
+	--container-md: 1024px;
+	--container-lg: 1280px;
+	--container-xl: 1440px;
 }
+
+/* ========== GLOBAL STYLES ========== */
 
 * {
 	margin: 0;
@@ -70,4 +89,86 @@ body {
 	font-family: var(--font-heebo);
 	background-color: var(--color-surface-background);
 	color: var(--color-text-primary);
+}
+
+body a {
+	text-decoration: none;
+}
+
+/* ========== HEADER ========== */
+
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+
+	max-width: var(--container-xl);
+	width: 100%;
+	height: var(--space-20);
+	margin: 0 auto;
+	padding: 0 var(--space-4);
+
+	display: flex;
+	align-items: center;
+
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.header > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	max-width: var(--container-lg);
+	width: 100%;
+	margin: 0 auto;
+}
+
+.logo {
+	.firstname {
+		font-family: var(--font-kalam);
+		font-size: var(--font-3xl);
+		font-weight: 400;
+		color: var(--color-text-primary);
+	}
+
+	.lastname {
+		font-family: var(--font-kalam);
+		font-size: var(--font-3xl);
+		font-weight: 700;
+		color: var(--color-text-primary);
+	}
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+	gap: var(--space-4);
+}
+
+.menu-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: var(--space-2);
+	padding: var(--space-2);
+
+	font-size: var(--font-base);
+	font-weight: 700;
+
+	color: var(--color-text-secondary);
+	border: 2px solid transparent;
+	border-radius: var(--radius-xl);
+}
+
+.menu-item:hover {
+	color: var(--color-text-primary);
+	font-weight: 700;
+}
+
+.menu-item:focus {
+	border-color: var(--color-text-primary);
+	color: var(--color-text-primary);
+	font-weight: 700;
 }
