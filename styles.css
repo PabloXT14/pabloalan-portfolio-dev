@@ -274,6 +274,7 @@ button {
 }
 
 .text-gradient {
+  width: fit-content;
 	background: var(--brand-gradient-horizontal);
 
 	background-clip: text;
