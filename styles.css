@@ -100,11 +100,12 @@
 	--transition-default: 300ms ease-in-out;
 
 	/* 📏 Breakpoints */
-	--breakpoint-xs: 640px;
-	--breakpoint-sm: 768px;
-	--breakpoint-md: 1024px;
-	--breakpoint-lg: 1280px;
-	--breakpoint-xl: 1536px;
+	--breakpoint-xs: 480px;
+	--breakpoint-sm: 640px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 
 	/* 📏 Container */
 	--container-xs: 640px;
@@ -145,6 +146,8 @@ body a {
 }
 
 button {
+  display: flex;
+  background-color: transparent;
 	cursor: pointer;
 	border: none;
 }
@@ -216,6 +219,9 @@ button {
 }
 
 .icon-button-primary {
+  height: var(--space-12);
+  width: var(--space-12);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -245,6 +251,9 @@ button {
 }
 
 .icon-button-secondary {
+  height: var(--space-12);
+  width: var(--space-12);
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -283,6 +292,12 @@ button {
 	color: transparent;
 }
 
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-surface-secondary);
+}
+
 /* ========== HEADER ========== */
 
 .header {
@@ -292,7 +307,7 @@ button {
 
 	max-width: var(--container-xl);
 	width: 100%;
-	height: var(--space-20);
+	height: var(--space-16);
 	margin: 0 auto;
 	padding: 0 var(--space-4);
 
@@ -329,7 +344,7 @@ button {
 }
 
 .navbar {
-	display: flex;
+	display: none;
 	align-items: center;
 	gap: var(--space-4);
 }
@@ -359,6 +374,81 @@ button {
 	border-color: var(--color-text-primary);
 	color: var(--color-text-primary);
 	font-weight: 700;
+}
+
+/* MOBILE MENU */
+
+#menu-toggle {
+  & > i {
+    font-size: var(--font-2xl);
+    color: var(--color-text-primary);
+  }
+
+  .ph-x {
+    display: none;
+  }
+
+  .ph-list {
+    display: block;
+  }
+}
+
+#menu-toggle.active {
+  .ph-x {
+    display: block;
+  }
+
+  .ph-list {
+    display: none;
+  }
+}
+
+#mobile-menu {
+  z-index: 1000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  width: 280px;
+  height: calc(100vh - var(--space-20));
+  padding: 1.5rem 1rem;
+
+  background: var(--color-surface-primary);
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: var(--space-6);
+
+  .buttons {
+    display: flex;
+    gap: var(--space-4);
+  }
+}
+
+#mobile-menu.active {
+  transform: translateX(0);
+}
+
+#overlay {
+  height: calc(100vh - var(--space-20));
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  /* background: rgba(0,0,0,0.4); */
+  backdrop-filter: blur(8px);
+  display: none;
+
+  z-index: 1;
+}
+
+#overlay.active {
+  display: block;
 }
 
 /* ========== HERO SECTION ========== */
@@ -422,3 +512,50 @@ button {
 	max-width: 488px;
 	width: 100%;
 }
+
+
+/* ========== RESPONSIVE ========== */
+
+/* xs - 480px */
+@media (min-width: 480px) {
+
+}
+
+
+/* sm - 640px */
+@media (min-width: 640px) {
+
+}
+
+/* md - 768px */
+@media (min-width: 768px) {
+  .header {
+    height: var(--space-20);
+    padding: 0 var(--space-8);
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+  }
+}
+
+/* lg - 1024px */
+@media (min-width: 1024px) {
+
+}
+
+/* xl - 1280px */
+@media (min-width: 1280px) {
+
+}
+
+/* 2xl - 1536px */
+@media (min-width: 1536px) {
+
+}
+
+/* ========== ANIMATIONS ========== */
