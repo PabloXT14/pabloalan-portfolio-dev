@@ -11,6 +11,7 @@
 	--color-primary-400: #9955e8;
 	--color-primary-500: #8a42db;
 
+	--color-secondary-50: #7dffaf24;
 	--color-secondary-500: #7dffaf;
 
 	--color-surface-background: #171023;
@@ -250,7 +251,7 @@ button {
 	background-color: var(--color-surface-background);
 	color: var(--color-text-primary);
 	border-radius: var(--radius-lg);
-	/* outline: 2px solid transparent; */
+	box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
 
 	transition: background-color var(--transition-fast);
 
@@ -264,7 +265,8 @@ button {
 		outline-offset: 2px;
 	}
 
-	& > i {
+	i,
+	ion-icon {
 		font-size: var(--font-2xl);
 	}
 }
@@ -282,7 +284,7 @@ button {
 	background-color: var(--color-surface-secondary);
 	color: var(--color-text-primary);
 	border-radius: var(--radius-lg);
-	/* outline: 2px solid transparent; */
+	box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
 
 	transition: background-color var(--transition-fast);
 
@@ -296,7 +298,8 @@ button {
 		outline-offset: 2px;
 	}
 
-	& > i {
+	i,
+	ion-icon {
 		font-size: var(--font-2xl);
 	}
 }
@@ -638,13 +641,22 @@ button {
 	}
 
 	.project-card {
+		position: relative;
 		background-color: var(--color-surface-primary);
 		padding: var(--space-6);
 		border-radius: var(--radius-2xl);
+		border: 2px solid transparent;
 
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-4);
+
+		transition: all var(--transition-default);
+
+		&:hover {
+			border-color: var(--color-secondary-500);
+			box-shadow: 0 0 48px var(--color-secondary-50);
+		}
 
 		.project-image {
 			width: 100%;
@@ -691,6 +703,22 @@ button {
 				-webkit-box-orient: vertical;
 				overflow: hidden;
 			}
+		}
+
+		.actions {
+			position: absolute;
+			top: var(--space-4);
+			right: var(--space-4);
+			display: flex;
+			opacity: 0;
+			flex-direction: column;
+			gap: var(--space-2);
+
+			transition: all var(--transition-fast);
+		}
+
+		&:hover .actions {
+			opacity: 1;
 		}
 	}
 }
