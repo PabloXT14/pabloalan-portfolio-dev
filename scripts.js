@@ -1,26 +1,40 @@
 /* ========== MOBILE MENU ========== */
 
-const toggleButton = document.getElementById('menu-toggle')
-const mobileMenu = document.getElementById('mobile-menu')
-const overlay = document.getElementById('overlay')
+const toggleButton = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+const overlay = document.getElementById("overlay");
 
-const menuOptions = mobileMenu.querySelectorAll('.menu-item')
+const menuOptions = mobileMenu.querySelectorAll(".menu-item");
 
 function toggleMenu() {
-  toggleButton.classList.toggle('active')
-  mobileMenu.classList.toggle('active')
-  overlay.classList.toggle('active')
+	toggleButton.classList.toggle("active");
+	mobileMenu.classList.toggle("active");
+	overlay.classList.toggle("active");
 }
 
 function closeMenu() {
-  toggleButton.classList.remove('active')
-  mobileMenu.classList.remove('active')
-  overlay.classList.remove('active')
+	toggleButton.classList.remove("active");
+	mobileMenu.classList.remove("active");
+	overlay.classList.remove("active");
 }
 
-toggleButton.addEventListener('click', toggleMenu)
-overlay.addEventListener('click', closeMenu)
+toggleButton.addEventListener("click", toggleMenu);
+overlay.addEventListener("click", closeMenu);
 
+// biome-ignore lint/complexity/noForEach: <explanation>
 menuOptions.forEach((option) => {
-  option.addEventListener('click', closeMenu)
-})
+	option.addEventListener("click", closeMenu);
+});
+
+/* ========== BACK TO TOP ========== */
+
+const backToTopButton = document.getElementById("back-to-top-button");
+
+function handleScrollToTop() {
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth",
+	});
+}
+
+backToTopButton.addEventListener("click", handleScrollToTop);

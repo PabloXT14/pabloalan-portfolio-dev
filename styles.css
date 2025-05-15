@@ -855,6 +855,42 @@ textarea {
 	}
 }
 
+/* ========== FOOTER ========== */
+#footer {
+	width: 100%;
+	padding: var(--space-6) var(--space-4);
+
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: var(--space-4);
+
+	.copyright {
+		flex: 1;
+
+		color: var(--color-text-secondary);
+		font-size: var(--font-sm);
+		font-weight: var(--font-weight-regular);
+		line-height: var(--line-height-base);
+
+		i {
+			color: var(--color-primary-500);
+		}
+
+		a {
+			color: var(--color-primary-500);
+			text-decoration: underline;
+		}
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+
 /* ========== RESPONSIVE ========== */
 
 /* xs - 480px */
@@ -916,6 +952,18 @@ textarea {
 		padding: var(--space-18);
 		border-radius: var(--radius-2xl);
 	}
+
+	#footer {
+		flex-direction: row;
+		align-items: center;
+		gap: var(--space-6);
+
+		padding: var(--space-10);
+
+		.links {
+			gap: var(--space-8);
+		}
+	}
 }
 
 /* lg - 1024px */
@@ -937,6 +985,10 @@ textarea {
 	#contact .container {
 		flex-direction: row;
 		gap: var(--space-32);
+	}
+
+	#footer {
+		padding: var(--space-8) var(--space-28);
 	}
 }
 
