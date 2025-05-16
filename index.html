@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="styles.css">
 
   <!-- Scripts -->
-  <script src="index.js" defer></script>
+  <script type="module" src="index.js" defer></script>
 
   <!-- Phosphor-icons -->
   <link rel="stylesheet" type="text/css"
@@ -156,9 +156,9 @@
         </h2>
       </div>
 
-      <div class="projects-grid">
-        <!-- PROJECT 01 -->
-        <div class="project-card">
+      <div id="projects-grid">
+        <!-- PROJECT EXAMPLE -->
+        <!-- <div class="project-card">
           <img src="assets/projects-images/devlinks.png" alt="DevLinks" class="project-image" />
 
           <div class="project-date-stack">
@@ -184,67 +184,9 @@
               <i class="ph ph-arrow-up-right"></i>
             </a>
           </div>
-        </div>
+        </div> -->
 
-        <!-- PROJECT 02 -->
-        <div class="project-card">
-          <img src="assets/projects-images/feedback-widget.png" alt="Feedback Widget" class="project-image" />
-
-          <div class="project-date-stack">
-            <span>Jul - Dez 2023</span>
-
-            <div class="tech-stack">
-              <i class="devicon-tailwindcss-original"></i>
-              <i class="devicon-python-plain"></i>
-            </div>
-          </div>
-
-          <div class="project-description">
-            <strong>Feedback Widget</strong>
-
-            <p>Um widget de feedback para melhorar suas aplicações baseado no feedback dos seus usuários.</p>
-          </div>
-
-          <div class="actions">
-            <a href="#github-project-02" target="_blank" class="icon-button-primary">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-
-            <a href="/project.html?id=02" class="icon-button-primary">
-              <i class="ph ph-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- PROJECT 03 -->
-        <div class="project-card">
-          <img src="assets/projects-images/nutritional-table.png" alt="Nutricional Table" class="project-image" />
-
-          <div class="project-date-stack">
-            <span>Jul - Dez 2023</span>
-
-            <div class="tech-stack">
-              <i class="devicon-react-original"></i>
-              <ion-icon name="logo-nodejs"></ion-icon>
-            </div>
-          </div>
-
-          <div class="project-description">
-            <strong>Nutricional Table</strong>
-
-            <p>Um app para melhorar os seus hábitos alimentares baseado nos valores nutricionais.</p>
-          </div>
-
-          <div class="actions">
-            <a href="#github-project-03" target="_blank" class="icon-button-primary">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-
-            <a href="/project.html?id=03" class="icon-button-primary">
-              <i class="ph ph-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
+        <!-- PROJETOS SÃO CARREGADOS DINAMICAMENTE VIA JS -->
       </div>
 
       <a href="https://github.com/pabloxt14" target="_blank" class="button-secondary">
