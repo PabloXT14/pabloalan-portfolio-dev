@@ -14,6 +14,10 @@
 	--color-secondary-50: #7dffaf24;
 	--color-secondary-500: #7dffaf;
 
+  --color-success-500: #4BB543;
+
+  --color-danger-500: #f44336;
+
 	--color-surface-background: #171023;
 	--color-surface-primary: #2c243b;
 	--color-surface-secondary: #413a4f;
@@ -423,6 +427,30 @@ textarea {
 		font-weight: var(--font-weight-regular);
 		line-height: var(--line-height-base);
 	}
+}
+
+/* TOAST */
+#toast {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: var(--color-success-500);
+  color: var(--color-text-primary);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 999;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.hidden {
+    display: none;
+  }
 }
 
 /* ========== HEADER ========== */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
   <meta charset="UTF-8">
@@ -39,6 +39,8 @@
 
 <body>
   <div id="overlay"></div>
+
+  <div id="toast" class="hidden">Mensagem enviada com sucesso!</div>
 
   <header class="header">
     <div>
@@ -242,11 +244,16 @@
           </div>
         </div>
 
-        <form action="">
+        <form id="contact-form" action="https://formsubmit.co/pabloxt14@gmail.com" method="POST">
           <div class="inputs">
-            <input type="text" placeholder="Nome" class="custom-input" required>
-            <input type="email" placeholder="Email" class="custom-input" required>
-            <textarea placeholder="Mensagem" class="custom-textarea" required></textarea>
+            <input type="text" name="name" placeholder="Nome" class="custom-input" required>
+            <input type="email" name="email" placeholder="Email" class="custom-input" required>
+            <textarea name="message" placeholder="Mensagem" class="custom-textarea" required></textarea>
+
+            <!-- Impede redirecionamento e ativa resposta em JSON -->
+            <!-- <input type="hidden" name="_redirect" value="javascript:void(0);" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem. Entraremos em contato em breve!" /> -->
           </div>
 
           <button type="submit" class="button-primary">

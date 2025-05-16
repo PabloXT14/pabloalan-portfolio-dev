@@ -78,3 +78,42 @@ PROJECTS.forEach(project => {
 
   projectsContainer.innerHTML += projectCard
 })
+
+/* ========== TOAST ========== */
+// const form = document.getElementById('contact-form');
+// const toast = document.getElementById('toast');
+
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault(); // Evita o envio tradicional
+
+//   const formData = Object.fromEntries(new FormData(e.target).entries());
+
+//   console.log('FORM ACTION: ', form.action)
+//   console.log('FORM DATA: ', formData)
+
+//   fetch(form.action, {
+//     method: 'POST',
+//     body: formData,
+//   })
+//     .then(response => {
+//       if (response.ok) {
+//         showToast();
+//         form.reset();
+//       } else {
+//         alert('Erro ao enviar mensagem.');
+//       }
+//     })
+//     .catch(error => {
+//       alert('Erro de rede. Tente novamente.');
+//     });
+// });
+
+// function showToast() {
+//   toast.classList.remove('hidden');
+//   toast.classList.add('show');
+
+//   setTimeout(() => {
+//     toast.classList.remove('show');
+//     toast.classList.add('hidden');
+//   }, 3000);
+// }
