@@ -1,72 +1,119 @@
 const PROJECTS = [
   {
     id: "01",
-    title: "DevLinks",
-    shortDescription: "Um agregador de links para medias sociais.",
+    title: "BookWise",
+    shortDescription: "Plataforma de avaliação de livros.",
     description: [
-      'Melhoramos nosso CSAT de 4,4 para 4,8 após analisar o feedback dos clientes fornecidos sobre nosso produto por meio deste widget.',
-      'Trabalhei como desenvolvedor principal desses recursos, implementando o front-end usando Tailwind e um painel Data Viz usando Python para acompanhar o feedback do cliente e melhorar a análise de dados.',
-      'O principal desafio era criar uma estrutura flexível que pudesse ser usada como uma API em todos os aplicativos web da nossa empresa.'
+      'O projeto BookWise é uma plataforma de recomendações de livros para leitores, um lugar onde eles possam avaliar e ver avaliações de outros leitores sobre os mais diversos livros.',
+      'Realizei a implementação tanto da parte front-end quanto back-end, fazendo uso do framework Next.js, que permitiu essa integração de maneira simples e eficiente.',
+      `Abaixo segue as principais ferramentas e tecnologias utilizadas no desenvolvimento da aplicação:
+      <br />
+      ✅ TypeScript <br />
+      ✅ Next <br />
+      ✅ Prisma <br />
+      ✅ NextAuth <br />
+      ✅ Stitches <br />
+      ✅ React Query <br />
+    `
     ],
     role: 'Full-stack developer',
-    image: "assets/projects-images/devlinks.png",
-    date: "Jul - Dez 2023",
+    image: "assets/projects-images/book-wise.png",
+    date: "Set - Out 2023",
     techStack: [
       {
-        name: "JavaScript",
-        icon: '<i class="devicon-javascript-plain"></i>',
+        name: "Next.js",
+        icon: '<i class="devicon-nextjs-plain"></i>',
+      },
+      {
+        name: "TypeScript",
+        icon: '<i class="devicon-typescript-plain"></i>',
+      },
+      {
+        name: "React Query",
+        icon: '<i class="devicon-react-original"></i>',
       }
     ],
-    repositoryUrl: "https://github.com/pabloxt14/devlinks",
-    liveUrl: "https://devlinks-pabloxt14.vercel.app/"
+    repositoryUrl: "https://github.com/PabloXT14/book-wise",
+    liveUrl: "https://pabloxt14-book-wise.vercel.app/"
   },
   {
     id: "02",
-    title: "Feedback Widget",
-    shortDescription: "Um widget de feedback para melhorar suas aplicações baseado no feedback dos seus usuários.",
+    title: "Ignite Shop",
+    shortDescription: "Aplicação web de vendas de camisetas com temas do mundo dev.",
     description: [
-      'Melhoramos nosso CSAT de 4,4 para 4,8 após analisar o feedback dos clientes fornecidos sobre nosso produto por meio deste widget.',
-      'Atravessamos o conhecimento de Python, HTML e CSS e desenvolvemos uma estrutura flexível que pudesse ser usada como uma API em todos os aplicativos web da nossa empresa.',
-      'O principal desafio era criar uma estrutura flexível que pudesse ser usada como uma API em todos os aplicativos web da nossa empresa.'
+      'O Ignite Shop é um aplicação web de vendas de camisetas com temas do mundo dev, mostrando com detalhes a parte visual e informacional das camisetas, além de apresentar um carrinho onde o cliente pode adicionar as suas compras.',
+      'O principal conceito treinado nesta aplicação foi a utilização do framework Next.js, explorando conceitos como o de SSR (Server Side Rendering) e SSG (Static Site Generation), além da utilização da biblioteca Stitches.js para a estilização.',
+      `Abaixo segue as principais ferramentas e tecnologias utilizadas no desenvolvimento da aplicação:
+      <br />
+      ✅ Next.js <br />
+      ✅ TypeScript <br />
+      ✅ Stitches <br />
+      ✅ Radix <br />
+      ✅ Phosphor Icons <br />
+      ✅ Stripe <br />
+      `
     ],
     role: 'Full-stack developer',
-    image: "assets/projects-images/feedback-widget.png",
-    date: "Jul - Dez 2023",
+    image: "assets/projects-images/ignite-shop.png",
+    date: "Jan - Fev 2023",
     techStack: [
       {
-        name: "Tailwind",
-        icon: '<i class="devicon-tailwindcss-original"></i>',
+        name: "Next.js",
+        icon: '<i class="devicon-nextjs-plain"></i>',
       },
       {
-        name: "Python",
-        icon: '<i class="devicon-python-plain"></i>',
+        name: "TypeScript",
+        icon: '<i class="devicon-typescript-plain"></i>',
+      },
+      {
+        name: "Stripe",
+        icon: '<i class="ph ph-stripe-logo"></i>',
       }
     ],
-    repositoryUrl: "https://github.com/pabloxt14/devlinks",
-    liveUrl: "https://devlinks-pabloxt14.vercel.app/"
+    repositoryUrl: "https://github.com/PabloXT14/Ignite-Shop",
+    liveUrl: "https://ignite-shop-kappa.vercel.app/"
   },
   {
     id: "03",
-    title: "Nutritional Table",
-    shortDescription: "Um app para melhorar os seus hábitos alimentares baseado nos valores nutricionais.",
+    title: "Rocket Notes",
+    shortDescription: "Aplicação web para criar e gerenciar anotações.",
     description: [
-      'Um app para melhorar os seus hábitos alimentares baseado nos valores nutricionais.',
-      'Tenha uma tabela de referência para ajudar a melhorar seus hábitos alimentares baseado nos valores nutricionais.',
-      'O principal desafio era criar uma estrutura flexível que pudesse ser usada como uma API em todos os aplicativos web da nossa empresa.',
+      'O Rocket Notes é uma aplicação web na qual os usuários podem se cadastrar e criar de forma organizada anotações sobre determinados assuntos, tendo disponível a adição de titulo, descrição, links e tags para cada nota, além de contar a edição de perfil do usuário, podendo alterar seu avatar, nome, email e senha.',
+      `Os principais conceitos/estudos que realizei com este projeto foram:
+      <br />
+      🔹 Revisar conceitos base. <br />
+      🔹 Utilização do React Query para buscar dados da API no Front-end. <br />
+      🔹 Construção e deploy completo de um back-end com Node. <br />
+      🔹 Implementação de Testes no back-end (o que é algo necessário para uma aplicação ser profissional e escalável, evitando muitos bugs futuros inesperados).`,
+      `Abaixo segue as principais ferramentas e tecnologias utilizadas no desenvolvimento da aplicação:
+      <br />
+      ✅ React <br />
+      ✅ TypeScript <br />
+      ✅ Styled Components <br />
+      ✅ React Query <br />
+      ✅ Express <br />
+      ✅ PostgreSQL
+      `
     ],
     role: 'Full-stack developer',
-    image: "assets/projects-images/nutritional-table.png",
-    date: "Jul - Dez 2023",
+    image: "assets/projects-images/rocket-notes.png",
+    date: "Fev - Mar 2023",
     techStack: [
       {
         name: "React",
         icon: '<i class="devicon-react-original"></i>',
       },
       {
-        name: "Node",
-        icon: '<ion-icon name="logo-nodejs"></ion-icon>',
+        name: "TypeScript",
+        icon: '<i class="devicon-typescript-plain"></i>',
+      },
+      {
+        name: "Express",
+        icon: '<i class="devicon-express-original"></i>',
       }
     ],
+    repositoryUrl: "https://github.com/PabloXT14/Rocketnotes-Web",
+    liveUrl: "https://rocketnotesweb.netlify.app/"
   }
 ]
 
